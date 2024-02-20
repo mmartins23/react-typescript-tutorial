@@ -1,5 +1,6 @@
 import './App.css';
 import Button from './components/Button';
+import Container from './components/Container';
 import Greet from './components/Greet';
 import Input from './components/Input';
 import Person from './components/Person';
@@ -26,9 +27,10 @@ function App() {
     <div className="App">
       <Greet name={'John'} messageCount={5} isLoggedIn={true} />
       <Person name={personName} />
-      <PersonList names={nameList}/>
+      <PersonList names={nameList} />
       <Button handleClick={(event, id) => console.log('Button Clicked', event, id)} />
-      <Input value={''} handleChange={event => console.log(event)}/>
+      <Input value={''} handleChange={event => console.log(event)} />
+      <Container styles={{ border: "3px solid red", padding: "1rem" }} />
     </div>
   );
 }
