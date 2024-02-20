@@ -1,5 +1,7 @@
 import './App.css';
+import Button from './components/Button';
 import Greet from './components/Greet';
+import Input from './components/Input';
 import Person from './components/Person';
 import PersonList from './components/PersonList';
 
@@ -25,6 +27,8 @@ function App() {
       <Greet name={'John'} messageCount={5} isLoggedIn={true} />
       <Person name={personName} />
       <PersonList names={nameList}/>
+      <Button handleClick={(event, id) => console.log('Button Clicked', event, id)} />
+      <Input value={''} handleChange={event => console.log(event)}/>
     </div>
   );
 }
