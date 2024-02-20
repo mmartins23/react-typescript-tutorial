@@ -6,6 +6,7 @@ import Input from './components/Input';
 import Person from './components/Person';
 import PersonList from './components/PersonList';
 import LoggedIn from './components/state/LoggedIn';
+import User from './components/state/User';
 
 function App() {
 
@@ -33,6 +34,7 @@ function App() {
       <Input value={''} handleChange={event => console.log(event)} />
       <Container styles={{ border: "3px solid red", padding: "1rem" }} />
       <LoggedIn/>
+      <User/>
     </div>
   );
 }
