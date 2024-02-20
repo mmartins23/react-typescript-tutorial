@@ -6,7 +6,7 @@ type AuthUser = {
 }
 
 export default function User() {
-    const [user, setUser] = useState<AuthUser |null >(null);
+    const [user, setUser] = useState<AuthUser>({} as AuthUser);
 
     function handleLogin() {
         setUser({
@@ -15,14 +15,14 @@ export default function User() {
         })
     }
 
-    function handleLogOut() {
-        setUser(null)
-    }
+    // function handleLogOut() {
+    //     setUser(null)
+    // }
   return (
     <div>
         <button onClick={handleLogin}>Login</button>
-        <button onClick={handleLogOut}>Logout</button>
-        <p>The current user's details are: {user?.name} {user?.email}</p>
+        {/* <button onClick={handleLogOut}>Logout</button> */}
+        <p>The current user's details are: {user.name} {user?.email}</p>
     </div>
   )
 }
