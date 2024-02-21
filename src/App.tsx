@@ -7,9 +7,10 @@ import Person from './components/Person';
 import PersonList from './components/PersonList';
 import { Box } from './components/context/Box';
 import { ThemeContextProvider } from './components/context/ThemeContext';
+import { UserContextProvider } from './components/context/UserContext';
 import { Counter } from './components/state/Counter';
 import LoggedIn from './components/state/LoggedIn';
-import User from './components/state/User';
+import {User} from './components/context/User';
 
 function App() {
 
@@ -42,6 +43,9 @@ function App() {
       <ThemeContextProvider>
       <Box/>
       </ThemeContextProvider>
+      <UserContextProvider>
+        <User/>
+      </UserContextProvider>
     </div>
   );
 }
