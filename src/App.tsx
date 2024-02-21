@@ -5,6 +5,8 @@ import Greet from './components/Greet';
 import Input from './components/Input';
 import Person from './components/Person';
 import PersonList from './components/PersonList';
+import { Box } from './components/context/Box';
+import { ThemeContextProvider } from './components/context/ThemeContext';
 import { Counter } from './components/state/Counter';
 import LoggedIn from './components/state/LoggedIn';
 import User from './components/state/User';
@@ -37,6 +39,9 @@ function App() {
       <LoggedIn/>
       <User/>
       <Counter/>
+      <ThemeContextProvider>
+      <Box/>
+      </ThemeContextProvider>
     </div>
   );
 }
