@@ -11,6 +11,7 @@ import { UserContextProvider } from './components/context/UserContext';
 import { Counter } from './components/state/Counter';
 import LoggedIn from './components/state/LoggedIn';
 import {User} from './components/context/User';
+import DomRef from './components/ref/DomRef';
 
 function App() {
 
@@ -46,6 +47,7 @@ function App() {
       <UserContextProvider>
         <User/>
       </UserContextProvider>
+      <DomRef/>
     </div>
   );
 }
