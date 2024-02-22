@@ -12,6 +12,8 @@ import { Counter } from './components/state/Counter';
 import LoggedIn from './components/state/LoggedIn';
 import {User} from './components/context/User';
 import DomRef from './components/ref/DomRef';
+import Private from './components/auth/Private';
+import Profile from './components/auth/Profile';
 
 function App() {
 
@@ -48,6 +50,7 @@ function App() {
         <User/>
       </UserContextProvider>
       <DomRef/>
+      <Private isLoggedIn={true} component={Profile}/>
     </div>
   );
 }
