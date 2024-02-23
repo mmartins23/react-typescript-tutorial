@@ -14,6 +14,7 @@ import {User} from './components/context/User';
 import DomRef from './components/ref/DomRef';
 import Private from './components/auth/Private';
 import Profile from './components/auth/Profile';
+import { List } from './components/generics/List';
 
 function App() {
 
@@ -51,6 +52,26 @@ function App() {
       </UserContextProvider>
       <DomRef/>
       <Private isLoggedIn={true} component={Profile}/>
+      <List
+        items={[
+          {
+            id: 1,
+            first: 'Bruce',
+            last: 'Wayne'
+          },
+          {
+            id: 2,
+            first: 'Clark',
+            last: 'Kent'
+          },
+          {
+            id: 3,
+            first: 'Princess',
+            last: 'Diana'
+          }
+        ]}
+        onClick={(item) => console.log(item)}
+      />
     </div>
   );
 }
