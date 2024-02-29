@@ -18,6 +18,7 @@ import { List } from './components/generics/List';
 import { RandomNumber } from './components/restriction/RandomNumber';
 import { Toast } from './components/templateliterals/Toast';
 import { CustomButton } from './components/html/Button';
+import { Text } from './components/polymorphic/Text'
 import Heading from './components/props/Heading';
 import Oscar from './components/props/Oscar';
 function App() {
@@ -83,6 +84,15 @@ function App() {
       <RandomNumber value={10} isPositive/>
       <Toast position={"left-top"}/>
       <CustomButton variant={'primary'}>Click me</CustomButton>
+      <Text size='lg' as='h1'>
+        Heading
+      </Text>
+      <Text size='md' as='p'>
+        Paragraph
+      </Text>
+      <Text size='sm' color='secondary' as='label' htmlFor='someId'>
+        Label
+      </Text>
     </div>
   );
 }
