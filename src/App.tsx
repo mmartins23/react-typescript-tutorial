@@ -1,10 +1,10 @@
 import './App.css';
-import Button from './components/Button';
-import Container from './components/Container';
-import Greet from './components/Greet';
-import Input from './components/Input';
-import Person from './components/Person';
-import PersonList from './components/PersonList';
+import Button from './components/props/Button';
+import Container from './components/props/Container';
+import Greet from './components/props/Greet';
+import Input from './components/props/Input';
+import Person from './components/props/Person';
+import PersonList from './components/props/PersonList';
 import { Box } from './components/context/Box';
 import { ThemeContextProvider } from './components/context/ThemeContext';
 import { UserContextProvider } from './components/context/UserContext';
@@ -18,6 +18,8 @@ import { List } from './components/generics/List';
 import { RandomNumber } from './components/restriction/RandomNumber';
 import { Toast } from './components/templateliterals/Toast';
 import { CustomButton } from './components/html/Button';
+import Heading from './components/props/Heading';
+import Oscar from './components/props/Oscar';
 function App() {
 
   const personName = {
@@ -40,6 +42,10 @@ function App() {
       <Greet name={'John'} messageCount={5} isLoggedIn={true} />
       <Person name={personName} />
       <PersonList names={nameList} />
+      <Heading>Placeholder text</Heading>
+      <Oscar>
+        <Heading>And the Oscar goes to ...</Heading>
+      </Oscar>
       <Button handleClick={(event, id) => console.log('Button Clicked', event, id)} />
       <Input value={''} handleChange={event => console.log(event)} />
       <Container styles={{ border: "3px solid red", padding: "1rem" }} />
