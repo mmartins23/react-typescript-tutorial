@@ -1,10 +1,10 @@
 type GreetProps = {
     name: string,
-    messageCnt: number,
+    messageCnt?: number,
     isLoggedIn: boolean
 }
 
-function Greet({ name, messageCnt, isLoggedIn }: GreetProps) {
+function Greet({ name, messageCnt = 0, isLoggedIn }: GreetProps) {
     return (
         <div>
             {isLoggedIn ? (
