@@ -1,10 +1,20 @@
 type GreetProps = {
-    name: string
+    name: string,
+    messageCnt: number,
+    isLoggedIn: boolean
 }
 
-function Greet({ name }: GreetProps) {
+function Greet({ name, messageCnt, isLoggedIn }: GreetProps) {
     return (
-        <div>Good morning, {name}! You have 10 unread messages.</div>
+        <div>
+            {isLoggedIn ? (
+                <h2>
+                    Hey {name}! You have {messageCnt} unread messages
+                </h2>
+            ) : (
+                <h2>Welcome Guest</h2>
+            )}
+        </div>
     )
 }
 
