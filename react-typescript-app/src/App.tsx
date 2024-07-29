@@ -17,6 +17,7 @@ import { Profile } from './components/auth/Profile';
 import { DomRef } from './components/ref/DomRef';
 import { MutableRef } from './components/ref/MutableRef';
 import { List } from './components/generics/List';
+import { RandomNumber } from './components/restriction/RandomNumber';
 
 function App() {
   const personName = {
@@ -60,7 +61,7 @@ function App() {
       <UserContextProvider>
         <User />
       </UserContextProvider>
-      <Private isLoggedIn={true} component={Profile}/>
+      <Private isLoggedIn={true} component={Profile} />
       <DomRef />
       <MutableRef />
       <List
@@ -83,6 +84,8 @@ function App() {
         ]}
         onClick={item => console.log(item)}
       />
+      <RandomNumber value={10} isPositive />
+
     </div>
   );
 }
