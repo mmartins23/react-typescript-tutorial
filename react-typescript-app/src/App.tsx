@@ -14,6 +14,8 @@ import { UserContextProvider } from './components/context/UserContext'
 import { User } from './components/context/User'
 import { Private } from './components/auth/Private';
 import { Profile } from './components/auth/Profile';
+import { DomRef } from './components/ref/DomRef';
+import { MutableRef } from './components/ref/MutableRef';
 
 function App() {
   const personName = {
@@ -58,6 +60,8 @@ function App() {
         <User />
       </UserContextProvider>
       <Private isLoggedIn={true} component={Profile}/>
+      <DomRef />
+      <MutableRef />
     </div>
   );
 }
